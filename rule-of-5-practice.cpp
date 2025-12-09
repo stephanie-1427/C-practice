@@ -68,6 +68,8 @@ class DLList {
 
                     tmp = tmp->next;
                 }
+
+                size = rhs.size;
             }
 
             // return *this
@@ -94,23 +96,10 @@ class DLList {
                 // delete contents of this object
                 clear();
 
-                // deep copy elements of rhs object into this object
-                dllNode *tmp = rhs.head;
-                while (tmp != nullptr) {
-                    dllNode *insert = new dllNode{tmp->data, nullptr, nullptr};
-
-                    // first element
-                    if (tmp == rhs.head) {
-                        head = insert;
-                        tail = insert;
-                    } else { // append to end
-                        insert->prev = tail;
-                        tail->next = insert;
-                        tail = insert;
-                    }
-
-                    tmp = tmp->next;
-                }
+                // copy elements of rhs object into this object
+                head = rhs.head;
+                tail = rhs.tail;
+                size = rhs.size;
 
                 // reset elements of rhs object
                 rhs.head = nullptr;
