@@ -55,7 +55,7 @@ void deleteMatrixMixed(int **matrix, const int& rows) {
     // iterate through the array of pointers
     for (int i = 0; i < rows; ++i) {
         // delete each pointer (memory on heap)
-        delete matrix[i];
+        delete [] matrix[i];
     }
 }
 
