@@ -1,9 +1,5 @@
 #include <iostream>
 
-// implement the function createZeroMatrix to create and
-// populate a dynamic 2D array with the given number of
-// rows and columns, initializing all values to zero
-
 int** createZeroMatrix(const int& rows, const int& cols) {
     // initialize a pointer on stack (same type as return value)
     int **p;
@@ -33,9 +29,6 @@ void deleteMatrix(int **matrix, const int& rows) {
 }
 
 
-// implement the function createZeroMatrixMixed to create and
-// populate a mixed 2D array with the given number of
-// rows and columns, initializing all values to zero
 int* createZeroMatrixMixed(const int& rows, const int& cols) {
     // create an array of pointers on stack
     int *p[rows];
